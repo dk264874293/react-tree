@@ -1,0 +1,79 @@
+.cleatFix {
+  zoom: 1;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+  }
+}
+
+.newTreeBtn {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.treeContent {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #fafafa;
+  padding-bottom: 20px;
+
+  h5 {
+    background-color: #1890ff;
+    font-size: 16px;
+    color: #fff;
+    line-height: 3;
+    text-align: center;
+    margin: 0;
+  }
+
+  .treeList {
+    padding: 16px 16px 16px 22px;
+    border-bottom: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    .treeTitle {
+      display: inline-block;
+      width: calc(~"100% - 80px");
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: top;
+    }
+
+      &.active,
+      &:hover {
+        background-color: rgb(230, 247, 255);
+      }
+
+      .icon {
+        margin-right: 10px;
+        color: rgb(24, 144, 255);
+      }
+
+      .editBtn {
+        color: #1890ff;
+        float: right;
+      }
+
+      :global {
+        .anticon {
+          margin-right: 6px;
+        }
+      }
+    }
+
+    :global {
+      .ant-tree {
+        padding: 0 10px;
+
+        li span.ant-tree-switcher {
+          background: transparent;
+        }
+      }
+    }
+
+  }
